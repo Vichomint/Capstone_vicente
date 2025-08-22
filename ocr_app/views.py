@@ -8,6 +8,10 @@ from .forms import PDFUploadForm
 from django.http import HttpResponse
 from django.core.exceptions import ValidationError
 
+
+#conetario de prueba
+
+
 def extract_text_from_pdf(pdf_path):
     pages = convert_from_path(pdf_path)  #--> convertimos las paginas en imagenesa
     text = ""
