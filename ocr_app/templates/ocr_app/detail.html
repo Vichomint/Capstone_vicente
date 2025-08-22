@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Texto Extraído</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="background-color: #d3d3d3">
+    <div style="margin-top: 200px">
+      <center>
+        <h2>Texto Extraído</h2>
+        <a href="{% url 'download_text' pdf_doc.pk %}" class="btn btn-primary">
+          Descargar Texto
+        </a>
+        <a href="/" class="btn btn-secondary">Subir otro PDF</a>
+      </center>
+    </div>
+  </body>
+</html>

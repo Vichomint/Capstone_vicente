@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OCR</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="background-color: #d3d3d3">
+    <div style="margin-top: 200px">
+      <center>
+        <h2>OCR</h2>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="form-group">
+            {{ form.file.label_tag }} {{ form.file }}
+          </div>
+          <button type="submit" class="btn btn-primary">Procesar</button>
+        </form>
+      </center>
+    </div>
+  </body>
+</html>
